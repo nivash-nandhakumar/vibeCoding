@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Clipboard Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images.png" alt="Avatar" class="avatar">
+                <span>Code Blooded</span>
+            </div>
+            <div class="user-menu">
+                <button class="login-button">Login</button>
+                <button class="signup_button">Sign Up</button>
+                <div class="avatar-container" style="display: none;">
+                    <img src="avatar.png" alt="Avatar" class="avatar">
+                    <div class="dropdown-content">
+                        <a href="#" id="profile-button">Profile</a>
+                        <a href="#" id="logout-button">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Clipboard History</h1>
+        <div class="input-area">
+            <textarea id="clipboard-input" placeholder="Paste or type here..."></textarea>
+            <button id="add-button">Add</button>
+        </div>
+        <div id="clipboard-history"></div>
+    </div>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login-submit">Login</button>
+        </div>
+    </div>
+
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="password" id="signup-password" placeholder="Password">
+            <input type="email" id="signup-email" placeholder="Email">
+            <input type="tel" id="signup-phone" placeholder="Phone">
+            <button id="signup-submit">Sign Up</button>
+        </div>
+    </div>
+
+    <div id="profile-modal" class="modal" style="display: none;">
+        <div class="modal-content profile-modal-content">
+            <span class="close-button">&times;</span>
+            <img src="avatar.png" alt="Avatar" class="modal-avatar">
+            <h2 id="profile-username-h2"></h2>
+            <p><i class="fas fa-envelope"></i> <span id="profile-email">example@example.com</span></p>
+            <p><i class="fas fa-phone"></i> <span id="profile-phone">9876543210</span></p>
+        </div>
+    </div>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Edit Content</h2>
+            <textarea id="edit-textarea"></textarea>
+            <button id="edit-submit">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
